@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuesioner Penyakit Tuberkulosis (TB)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #d32f2f; /* Warna merah untuk tema kesehatan */
+        }
+        .intro {
+            background-color: #fff;
+padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .intro p {
+            line-height: 1.6;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+button {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #b71c1c;
+        }
+        #result {
+            display: none;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+.low-risk { color: #4caf50; }
+        .medium-risk { color: #ff9800; }
+        .high-risk { color: #d32f2f; }
+        .back-btn {
+            background-color: #2196f3;
+            margin-top: 10px;
+        }
+        .back-btn:hover {
+            background-color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kuesioner Penyakit Tuberkulosis (TB)</h1>
+    
+    <div class="intro">
+        <p>Selamat datang di kuesioner sederhana ini untuk menilai risiko penyakit tuberkulosis (TB). Jawab 10 pertanyaan di bawah ini dengan jujur. Hasil ini hanya untuk edukasi dan bukan pengganti diagnosis medis. Jika Anda curiga terkena TB, segera hubungi dokter atau puskesmas terdekat.</p>
+    </div>
+
+ <div class="warning">
+        <strong>Peringatan:</strong> Kuesioner ini bukan alat medis resmi. Konsultasikan dengan profesional kesehatan untuk pemeriksaan yang akurat.
+    </div>
+    
+    <form id="tbForm">
+        <div class="question">
+            <label>1. Apakah Anda mengalami batuk yang berlangsung lebih dari 2 minggu?</label>
+            <input type="radio" name="q1" value="ya"> Ya
+            <input type="radio" name="q1" value="tidak"> Tidak
+        </div>
+        
+        <div class="question">
+            <label>2. Apakah Anda pernah batuk berdarah?</label>
+            <input type="radio" name="q2" value="ya"> Ya
+            <input type="radio" name="q2" value="tidak"> Tidak
+        </div>
+
+<div class="question">
+            <label>3. Apakah Anda merasa lelah atau lesu secara terus-menerus tanpa sebab jelas?</label>
+            <input type="radio" name="q3" value="ya"> Ya
+            <input type="radio" name="q3" value="tidak"> Tidak
+        </div>
+        
+        <div class="question">
+            <label>4. Apakah Anda mengalami penurunan berat badan tanpa diet atau olahraga?</label>
+            <input type="radio" name="q4" value="ya"> Ya
+            <input type="radio" name="q4" value="tidak"> Tidak
+        </div>
+        
+        <div class="question">
+            <label>5. Apakah Anda sering berkeringat di malam hari?</label>
+            <input type="radio" name="q5" value="ya"> Ya
+            <input type="radio" name="q5" value="tidak"> Tidak
+        </div>
+
+ <div class="question">
+            <label>6. Apakah Anda mengalami demam ringan yang berulang?</label>
+            <input type="radio" name="q6" value="ya"> Ya
+            <input type="radio" name="q6" value="tidak"> Tidak
+        </div>
+        
+        <div class="question">
+            <label>7. Apakah Anda pernah kontak dekat dengan penderita TB yang dikonfirmasi?</label>
+            <input type="radio" name="q7" value="ya"> Ya
+            <input type="radio" name="q7" value="tidak"> Tidak
+        </div>
+        
+        <div class="question">
+            <label>8. Apakah Anda perokok aktif atau sering terpapar asap rokok?</label>
+            <input type="radio" name="q8" value="ya"> Ya
+            <input type="radio" name="q8" value="tidak"> Tidak
+        </div>
+
+ <div class="question">
+            <label>9. Apakah Anda memiliki kondisi kesehatan seperti HIV/AIDS atau diabetes?</label>
+            <input type="radio" name="q9" value="ya"> Ya
+            <input type="radio" name="q9" value="tidak"> Tidak
+        </div>
+        
+        <div class="question">
+            <label>10. Apakah Anda tinggal di lingkungan padat penduduk atau daerah dengan kasus TB tinggi?</label>
+            <input type="radio" name="q10" value="ya"> Ya
+            <input type="radio" name="q10" value="tidak"> Tidak
+        </div>
+        
+        <button type="submit">Submit Kuesioner</button>
+    </form>
+
+ <div id="result">
+        <h2>Hasil Kuesioner Anda</h2>
+        <p id="score"></p>
+        <p id="conclusion"></p>
+        <button type="button" class="back-btn" onclick="resetForm()">Kembali ke Kuesioner</button>
+    </div>
+    <script>
+        const form = document.getElementById('tbForm');
+        const result = document.getElementById('result');
+        const scoreEl = document.getElementById('score');
+        const conclusionEl = document.getElementById('conclusion');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+let score = 0;
+            const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'];
+            
+            questions.forEach(q => {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === 'ya') {
+                    score++;
+                }
+            });
+            
+            scoreEl.textContent = `Skor Anda: ${score} jawaban "Ya" dari 10 pertanyaan.`;
+            
+            let conclusion = '';
+            let riskClass = '';
+            if (score <= 2) {
+                conclusion = 'Risiko TB Anda rendah. Tetap jaga kesehatan dengan pola hidup sehat dan vaksinasi jika diperlukan.';
+                riskClass = 'low-risk';
+ } else if (score <= 5) {
+                conclusion = 'Risiko TB Anda sedang. Perhatikan gejala lebih lanjut dan konsultasikan dengan dokter untuk pemeriksaan dini.';
+                riskClass = 'medium-risk';
+            } else {
+                conclusion = 'Risiko TB Anda tinggi. Segera periksa ke fasilitas kesehatan terdekat untuk tes TB (seperti rontgen atau sputum test). Jangan tunda!';
+                riskClass = 'high-risk';
+            }
+            
+            conclusionEl.innerHTML = `<span class="${riskClass}">${conclusion}</span>`;
+            result.style.display = 'block';
+            form.style.display = 'none'; // Sembunyikan form setelah submit
+        });
+
+ function resetForm() {
+            form.reset();
+            result.style.display = 'none';
+            form.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
