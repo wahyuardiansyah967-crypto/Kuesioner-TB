@@ -1,0 +1,25 @@
+            let riskClass = '';
+            if (score <= 2) {
+                conclusion = 'Risiko TB Anda rendah. Tetap jaga kesehatan dengan pola hidup sehat dan vaksinasi jika diperlukan.';
+                riskClass = 'low-risk';
+            } else if (score <= 5) {
+                conclusion = 'Risiko TB Anda sedang. Perhatikan gejala lebih lanjut dan konsultasikan dengan dokter untuk pemeriksaan dini.';
+                riskClass = 'medium-risk';
+            } else {
+                conclusion = 'Risiko TB Anda tinggi. Segera periksa ke fasilitas kesehatan terdekat untuk tes TB (seperti rontgen atau sputum test). Jangan tunda!';
+                riskClass = 'high-risk';
+            }
+            
+            conclusionEl.innerHTML = `<span class="${riskClass}">${conclusion}</span>`;
+            result.style.display = 'block';
+            form.style.display = 'none'; // Sembunyikan form setelah submit
+        });
+        
+        function resetForm() {
+            form.reset();
+            result.style.display = 'none';
+            form.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
